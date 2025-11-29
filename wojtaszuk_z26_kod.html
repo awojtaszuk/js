@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kacper Lukowski</title>
+
+</head>
+<body>
+    <div class="code-container html">
+        <div class="title">KOD HTML</div>
+ <textarea cols="150" rows="35"> 
+<html>
+
+<head>
+  <title>
+    Obliczenia pola i obwodu
+  </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+  
+    h1 {
+      text-align: center;
+      margin-top: 15px;
+    }
+  
+    form {
+      text-align: center;
+      margin: 15px;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 15px;
+    }
+  
+    input[type="number"] {
+      width: 100px;
+      padding: 5px;
+      font-size: 16px;
+    }
+  
+    input[type="submit"] {
+      background-color: #ff00ff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  
+    input[type="submit"]:hover {
+      background-color: #005555;
+    }
+  
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 50%;
+    }
+  
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+  
+    th {
+      background-color: #0000ff;
+      color: #fff;
+    }
+  </style>
+  <script language="JavaScript">
+    function poleLuk(aWoj, bWoj, hWoj) {
+      return ((aWoj + bWoj) * hWoj) / 2;
+    }
+
+    function obwodLuk(aWoj, bWoj, hWoj) {
+      const biggestSide = Math.max(aWoj, bWoj);
+      const smallestSide = Math.min(aWoj, bWoj);
+
+      const cTriangle = (biggestSide - smallestSide) / 2;
+
+      const cWoj = Math.sqrt(hWoj**2 + cTriangle**2);
+
+      return 2 * cWoj + aWoj + bWoj;
+    }
+
+    function calcPoleObwod(event) {
+      event.preventDefault();
+
+      const aWoj = parseFloat(document.querySelector('[name="a_dana_Woj"]').value);
+      const bWoj = parseFloat(document.querySelector('[name="b_dana_Woj"]').value);
+      const hWoj = parseFloat(document.querySelector('[name="h_dana_Woj"]').value);
+
+      const pole = poleLuk(aWoj, bWoj, hWoj);
+      const obwod = obwodLuk(aWoj, bWoj, hWoj);
+
+      const poleOutput = document.querySelector('#wyprowadz_pole');
+      const obwodOutput = document.querySelector('#wyprowadz_obwod');
+
+      poleOutput.textContent = pole.toFixed(2);
+      obwodOutput.textContent = obwod.toFixed(2);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Obliczenia obwodu i pola trapezu</h1>
+  <br> <br>
+  <form name="formularz" action="#" onsubmit="calcPoleObwod(event); return false;">
+    <label>
+      Podaj a=
+      <input type="number" step="0.001" name="a_dana_Woj">
+    </label>
+
+    <label>
+      Podaj b=
+      <input type="number" step="0.001" name="b_dana_Woj">
+    </label>
+
+    <label>
+      Podaj h=
+      <input type="number" step="0.001" name="h_dana_Woj">
+    </label>
+
+    <input TYPE="submit" value="oblicz">
+  </form>
+
+  <table>
+    <tr>
+      <th>Pole = </th>
+      <td id="wyprowadz_pole"></td>
+    </tr>
+    <tr>
+      <th>Obwod = </th>
+      <td id="wyprowadz_obwod"></td>
+    </tr>
+  </table>
+</body>
+
+</html>
+
+      </textarea>
+</body>
+</html>

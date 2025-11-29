@@ -1,0 +1,61 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <script>
+    function AB_woj() {
+      let aX_woj = parseFloat(document.getElementById('aX').value);
+      let aY_woj = parseFloat(document.getElementById('aY').value);
+
+      let bX_woj = parseFloat(document.getElementById('bX').value);
+      let bY_woj = parseFloat(document.getElementById('bY').value);
+
+      document.getElementById("answer").innerHTML = "|AB|= "
+        + (Math.sqrt((aX_woj - bX_woj) ** 2 + (aY_woj - bY_woj) ** 2)).toFixed(2);
+    }
+    function BC_woj() {
+      let bX_woj = parseFloat(document.getElementById('bX').value);
+      let bY_woj = parseFloat(document.getElementById('bY').value);
+      let cX_woj = parseFloat(document.getElementById('cX').value);
+      let cY_woj = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|BC|= "
+        + (Math.sqrt((cX_woj - bX_woj) ** 2 + (cY_woj - bY_woj) ** 2)).toFixed(2);
+    }
+
+    function AC_woj() {
+      let aX_woj = parseFloat(document.getElementById('aX').value);
+      let aY_woj = parseFloat(document.getElementById('aY').value);
+      let cX_woj = parseFloat(document.getElementById('cX').value);
+      let cY_woj = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|AC|= "
+        + (Math.sqrt((aX_woj - cX_woj) ** 2 + (aY_woj - cY_woj) ** 2)).toFixed(2);
+    }
+
+  </script>
+
+  Podaj X punktu A: <input type="text" id="aX"><br>
+  Podaj Y punktu A: <input type="text" id="aY"><br>
+  <br>
+  <br>
+  Podaj X punktu B: <input type="text" id="bX"><br>
+  Podaj Y punktu B: <input type="text" id="bY"><br>
+  <br>
+  <br>
+  Podaj X punktu C: <input type="text" id="cX"><br>
+  Podaj Y punktu C: <input type="text" id="cY"><br>
+  <br>
+  <br>
+
+  <input type="button" value="Oblicz AB" onclick="AB_woj()"><br>
+  <br>
+  <input type="button" value="Oblicz BC" onclick="BC_woj()"><br>
+  <br>
+  <input type="button" value="Oblicz AC" onclick="AC_woj()"><br>
+  <br>
+  <br>
+  <div style="color:red;font-size:50px;" id="answer"></div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wojtaszuk z17</title>
+
+</head>
+<body>
+    <div class="code-container html">
+        <div class="title">KOD HTML</div>
+ <textarea cols="150" rows="35"> 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+    <style>
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding: 8px;
+          text-align: left;
+      }
+  </style>
+  </head>
+  <body>
+    <h2>1. Cztery sposoby wyjścia danych na stronę w JS:</h2>
+<ul>
+    <li>korzystając z funkcji <code>document.write()</code>, która wpisuje tekst bezpośrednio do dokumentu</li>
+    <li>wyświetlając komunikat w okienku dialogowym poprzez <code>alert()</code></li>
+    <li>umieszczając dane w elementach formularza (np. w polach tekstowych)</li>
+    <li>wstawiając wartości do komórek tabeli na stronie</li>
+</ul>
+
+<h2>2. Funkcja w JS:</h2>
+<ul>
+    <li>Jest to zestaw instrukcji zebranych pod jedną nazwą.</li>
+    <li>Po wywołaniu wykonuje zapisany wewnątrz kod.</li>
+    <li>Może przyjmować parametry przekazywane podczas jej uruchamiania.</li>
+    <li>Może zwrócić wynik działania za pomocą słowa kluczowego <code>return</code>.</li>
+</ul>
+
+<h2>3. Wybrane metody obiektu document:</h2>
+<table>
+    <tr>
+        <th>Metoda</th>
+        <th>Opis</th>
+    </tr>
+    <tr>
+        <td><code>getElementById("id")</code></td>
+        <td>Pozwala pobrać element posiadający wskazany identyfikator.</td>
+    </tr>
+    <tr>
+        <td><code>getElementsByTagName("znacznik")</code></td>
+        <td>Zwraca listę wszystkich elementów o wskazanym typie znacznika, np. DIV albo P.</td>
+    </tr>
+    <tr>
+        <td><code>getElementsByName("nazwa")</code></td>
+        <td>Pozwala uzyskać dostęp do elementów, które mają określoną wartość atrybutu name.</td>
+    </tr>
+</table>
+
+<h2>4. Właściwości elementów:</h2>
+<ul>
+    <li><strong>innerHTML</strong>: Umożliwia odczyt lub zmianę zawartości HTML znajdującej się w elemencie.</li>
+    <li><strong>innerText</strong>: Pozwala ustawić lub pobrać sam tekst wyświetlany w elemencie.</li>
+    <li><strong>className</strong>: Określa, jaka klasa CSS będzie przypisana do danego elementu.</li>
+</ul>
+
+<h2>Przykład:</h2>
+<pre>
+&lt;!DOCTYPE html&gt;
+...
+&lt;div id="nazwa"&gt;&lt;/div&gt;
+&lt;script&gt;
+document.getElementById("nazwa").innerHTML = "Witaj";
+document.getElementById("nazwa").className = "wyroznienieCzerwone";
+&lt;/script&gt;
+...
+</pre>
+    <input type="button" value="zamknij okno" onclick="window.close()"/>
+  </body>
+</html>
+
+      </textarea>
+</body>
+</html>
