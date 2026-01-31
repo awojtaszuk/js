@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 29 – Kod</title>
+</head>
+<body>
+
+<div class="code-container js">
+    <div class="title">KOD JavaScript – Zadanie 29</div>
+
+<textarea cols="150" rows="40">
+
+// 1. Określanie właściwości obiektu – dwa sposoby
+var auto = {};
+auto.marka = "Opel Omega";
+auto.rok = 1996;
+auto.cena = 25000;
+
+auto["kolor"] = "czarny";
+
+
+// 2. Odwoływanie się do pól i metod
+console.log(auto.marka);
+console.log(auto.rok);
+
+
+// 3–4. Obiekt z trzema polami i jedną metodą
+var osoba_1 = {
+    nazwisko: "Kowalski",
+    imie: "Jan",
+    zawod: "piekarz",
+    wyswietl: function () {
+        console.log(this.nazwisko + " " + this.imie);
+    }
+};
+
+osoba_1.wyswietl();
+
+
+// 5. Znaczenie słowa this
+console.log(osoba_1.zawod);
+
+
+// 6. Konstruktor w JavaScript
+function klient(nazwisko_k, imie_k, zawod_k) {
+    this.nazwisko = nazwisko_k;
+    this.imie = imie_k;
+    this.zawod = zawod_k;
+    this.wypisz = function () {
+        console.log(this.nazwisko + " " + this.imie);
+    }
+}
+
+
+// 7. Słowo kluczowe new
+var osoba1 = new klient("Kowalski", "Jan", "kierowca");
+var osoba2 = new klient("Nowak", "Anna", "sekretarka");
+
+osoba1.wypisz();
+osoba2.wypisz();
+
+
+// 8. Właściwość prototype
+function KlientProto() {
+    this.nazwisko = "Bielski";
+    this.imie = "Paweł";
+}
+
+KlientProto.prototype.pisz_dane = function () {
+    console.log(this.nazwisko + " " + this.imie);
+};
+
+KlientProto.prototype.zawod = "kierowca";
+
+var osoba3 = new KlientProto();
+osoba3.pisz_dane();
+console.log(osoba3.zawod);
+
+</textarea>
+
+</div>
+
+</body>
+</html>

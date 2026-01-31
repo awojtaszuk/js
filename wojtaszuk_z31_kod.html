@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 31 – Kod</title>
+</head>
+<body>
+
+<div class="code-container js">
+    <div class="title">KOD JavaScript – Zadanie 31</div>
+
+<textarea cols="150" rows="40">
+<html>
+<head>
+    <script type="text/javascript">
+        var Owoc = {
+            jaki_kolor: 'czerwony',
+            pestki: 'posiada',
+            nazwa_owocu: 'jabłko',
+            owoc_wyswietl_wojtaszuk: function () {
+                document.write(
+                    "pestki: " + this.pestki + "<br>" +
+                    "nazwa_owocu: " + this.nazwa_owocu + "<br>" +
+                    "jaki_kolor: " + this.jaki_kolor
+                );
+            }
+        };
+
+        Owoc.owoc_wyswietl_wojtaszuk();
+        Owoc.iloscpestek = 10;
+        Owoc.wypisz = function() {
+            alert('ilość pestek: ' + this.iloscpestek );
+        };
+        Owoc.wypisz();
+    </script>
+</head>
+<body>
+    <br>
+    Programowanie obiektowe. <br>
+     Obiekt to Owoc<br>
+    Pola:<br>
+    jaki_kolor<br>
+    pestki<br>
+    nazwa_owocu<br>
+    metoda: owoc_wyswietl_wojtaszuk<br>
+    nowe pole: iloscpestek<br>
+    nowa metoda: wypisz()<br>
+</body>
+</html>
+</textarea>
+
+</div>
+
+</body>
+</html>

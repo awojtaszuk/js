@@ -1,0 +1,37 @@
+<html>
+<head>
+    <script type="text/javascript">
+        var Owoc = {
+            jaki_kolor: 'czerwony',
+            pestki: 'posiada',
+            nazwa_owocu: 'jabłko',
+            owoc_wyswietl_wojtaszuk: function () {
+                document.write(
+                    "pestki: " + this.pestki + "<br>" +
+                    "nazwa_owocu: " + this.nazwa_owocu + "<br>" +
+                    "jaki_kolor: " + this.jaki_kolor
+                );
+            }
+        };
+
+        Owoc.owoc_wyswietl_wojtaszuk();
+        Owoc.iloscpestek = 10;
+        Owoc.wypisz = function() {
+            alert('ilość pestek: ' + this.iloscpestek );
+        };
+        Owoc.wypisz();
+    </script>
+</head>
+<body>
+    <br>
+    Programowanie obiektowe. <br>
+     Obiekt to Owoc<br>
+    Pola:<br>
+    jaki_kolor<br>
+    pestki<br>
+    nazwa_owocu<br>
+    metoda: owoc_wyswietl_wojtaszuk<br>
+    nowe pole: iloscpestek<br>
+    nowa metoda: wypisz()<br>
+</body>
+</html>

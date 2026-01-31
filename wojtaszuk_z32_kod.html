@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 31 – Kod</title>
+</head>
+<body>
+
+<div class="code-container js">
+    <div class="title">KOD JavaScript – Zadanie 31</div>
+
+<textarea cols="150" rows="40">
+<html>
+<head>
+    <script type="text/javascript">
+
+
+    function Owoc(nazwa, kolor, pestki, iloscpestek) {
+        this.nazwa_owocu = nazwa;
+        this.jaki_kolor = kolor;
+        this.pestki = pestki;
+        this.iloscpestek = iloscpestek;
+    }
+
+
+    Owoc.prototype.wyswietl = function () {
+        alert(
+            "nazwa owocu: " + this.nazwa_owocu + " | " +
+            "kolor: " + this.jaki_kolor + " | " +
+            "pestki: " + this.pestki + " | " +
+            "ilość pestek: " + this.iloscpestek
+        );
+    };
+
+    // Tworzenie obiektów za pomocą new
+    var o1 = new Owoc("jabłko", "czerwony", "posiada", 10);
+    var o2 = new Owoc("jabłko", "zielony", "posiada", 8);
+    var o3 = new Owoc("jabłko", "żółty", "posiada", 6);
+
+    // Wywołanie metody
+    o1.wyswietl();
+    o2.wyswietl();
+    o3.wyswietl();
+
+    // Dostęp do właściwości
+    document.write("Dostęp do właściwości:<br><br>");
+
+    document.write(
+        "Owoc 1: " + o1.nazwa_owocu + " " + o1.jaki_kolor + " " + o1.pestki + " " + o1.iloscpestek + "<br>"
+    );
+    document.write(
+        "Owoc 2: " + o2.nazwa_owocu + " " + o2.jaki_kolor + " " + o2.pestki + " " + o2.iloscpestek + "<br>"
+    );
+    document.write(
+        "Owoc 3: " + o3.nazwa_owocu + " " + o3.jaki_kolor + " " + o3.pestki + " " + o3.iloscpestek + "<br>"
+    );
+
+    </script>
+</head>
+<body>
+    <br>
+    Programowanie obiektowe <br>
+    Obiekt: Owoc (jabłko) <br>
+    Pola: nazwa_owocu, jaki_kolor, pestki, iloscpestek <br>
+    Metoda: wyswietl()
+</body>
+</html>
+</textarea>
+
+</div>
+
+</body>
+</html>
