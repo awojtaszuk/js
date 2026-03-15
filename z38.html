@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Wojtaszuk Z38_JS</title>
+
+<style>
+#demo_wojtaszuk{
+color:red;
+font-size:40px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Wojtaszuk</h2>
+
+<!-- ETAP 1 -->
+
+<div>
+<b>Pojęcie rozdzielczość ekranu/monitora oznacza:</b><br>
+liczbę pikseli wyświetlanych na ekranie monitora w poziomie i pionie,
+np. 1920x1080 lub 1024x768.
+</div>
+
+<br>
+
+<div>
+<b>Pojęcie szerokość/wysokość ekranu przeglądarki w pikselach oznacza:</b><br>
+aktualny obszar strony internetowej widoczny w oknie przeglądarki
+bez pasków narzędzi i pasków przewijania.
+</div>
+
+<br><br>
+
+<!-- ETAP 2 -->
+
+<h3>Rozmiar okna przeglądarki</h3>
+
+<p id="demo_wojtaszuk"></p>
+
+<script>
+
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+var x = document.getElementById("demo_wojtaszuk");
+x.innerHTML = "Szerokość przeglądarki: " + w + " px , wysokość: " + h + " px";
+
+</script>
+
+<br><br>
+
+<!-- ETAP 3 -->
+
+<h3>Rozdzielczość ekranu</h3>
+
+<script>
+
+document.write("<font color=silver size=7>Twoja rozdzielczość ekranu to: </font>");
+document.write("<font color=silver size=7>"+screen.width+"</font>");
+document.write("<font color=silver size=7> na </font>");
+document.write("<font color=silver size=7>"+screen.height+"</font>");
+
+</script>
+
+<br><br>
+
+<!-- ETAP 4 -->
+
+<h3>Sprawdzenie rozdzielczości</h3>
+
+<script>
+
+if (screen.width < 800 || screen.height < 600)
+{
+document.write("<br>Rozdzielczość ekranu powinna być większa niż 800x600");
+}
+
+else
+{
+document.write("<br>Rozdzielczość ekranu jest odpowiednia do wyświetlania strony.");
+}
+
+</script>
+
+</body>
+</html>
+
+<!-- Wojtaszuk Z38_JS -->

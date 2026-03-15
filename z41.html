@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 41 - Wojtaszuk</title>
+<style>
+body { background-color: silver; }
+</style>
+</head>
+<body>
+
+<script>
+// === DANE OSOBOWE ===
+var imie = "Adam";
+var nazwisko = "Wojtaszuk";
+var dzien = 10; 
+var numer_dziennika = 29;
+
+// === OBLICZENIA LICZB ===
+var liczba1_woj = imie.length; // 4
+var liczba2_woj = imie.length + 7; // 11
+var liczba3_woj = nazwisko.length; // 9
+var liczba4_woj = nazwisko.length + 4; // 13
+
+// === WIELKOŚĆ CZCIONKI ===
+var font_size_woj = 40 + (numer_dziennika % 7); // 40 + 1 = 41
+
+// === WYŚWIETLANIE DANYCH ===
+document.write('<div style="color:green; font-size:' + font_size_woj + 'px;">');
+document.write("Imię i nazwisko: " + imie + " " + nazwisko + "<br>");
+document.write("Obliczone liczby: " + liczba1_woj + ", " + liczba2_woj + ", " + liczba3_woj + ", " + liczba4_woj);
+document.write('</div><br>');
+
+// === MENU ===
+document.write('<div style="color:red; font-size:' + font_size_woj + 'px;">');
+document.write("MENU:<br>");
+document.write(liczba1_woj + " - Teoria operatorów logicznych<br>");
+document.write((liczba3_woj + 20) + " - Sprawdzanie przedziału [" + liczba3_woj + ";" + liczba4_woj + "]<br>");
+document.write((dzien + 50) + " - Sprawdzanie przedziału (-∞," + liczba1_woj + "] lub [" + liczba2_woj + ", +∞)<br>");
+document.write('</div><br>');
+
+// === WCZYTANIE OPCJI ===
+var opcja_woj = prompt("Podaj numer opcji:");
+
+// === OBSŁUGA OPCJI ===
+if(opcja_woj == liczba1_woj) { 
+    // OPCJA TEORIA
+    document.write('<font color=blue size=7>Jesteś w opcji teoria (operatorów logicznych)</font><br>');
+} else if(opcja_woj == (liczba3_woj + 20)) {
+    // OPCJA PRZEDZIAŁ LICZBOWY
+    var liczba_woj = prompt("Podaj liczbę do sprawdzenia przedziału [" + liczba3_woj + ";" + liczba4_woj + "]:");
+    liczba_woj = parseFloat(liczba_woj);
+    if(liczba_woj >= liczba3_woj && liczba_woj <= liczba4_woj) {
+        document.write('<font color=green size=7>Podana liczba należy do przedziału.</font><br>');
+    } else {
+        document.write('<font color=red size=7>Podana liczba nie należy do przedziału.</font><br>');
+    }
+} else if(opcja_woj == (dzien + 50)) {
+    // OPCJA PRZEDZIAŁ (-∞, liczba1] lub [liczba2, +∞)
+    var liczba2_woj_input = prompt("Podaj liczbę do sprawdzenia przedziału (-∞," + liczba1_woj + "] lub [" + liczba2_woj + ", +∞):");
+    liczba2_woj_input = parseFloat(liczba2_woj_input);
+    if(liczba2_woj_input <= liczba1_woj || liczba2_woj_input >= liczba2_woj) {
+        document.write('<font color=green size=7>Liczba należy do jednego z przedziałów.</font><br>');
+    } else {
+        document.write('<font color=red size=7>Liczba nie należy do żadnego z przedziałów.</font><br>');
+    }
+} else {
+    document.write('<font color=red size=7>Nie ma takiej opcji</font><br>');
+}
+</script>
+
+</body>
+</html>

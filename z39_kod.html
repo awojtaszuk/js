@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="UTF-8">
+<title>Wojtaszuk Z36_KOD</title>
+</head>
+
+<body>
+
+
+
+<textarea rows="35" cols="100">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 39 - Wojtaszuk</title>
+</head>
+<body>
+<h2 style="color:green;">MENU:</h2>
+<ul>
+  <li style="color:red;">1-CZERWONY</li>
+  <li style="color:blue;">2-NIEBIESKI</li>
+</ul>
+
+<input type="button" name="wojtaszuk" value="Oblicz" onclick="fun_woj()" />
+
+<script>
+function fun_woj() {
+    var x_woj = prompt("Podaj kolor (1/czerwony lub 2/niebieski):", "");
+    if(x_woj == 1 || x_woj.toLowerCase() == "czerwony") {
+        document.write('<h1 style="color:red;">wczytałeś kolor czerwony</h1><br />');
+    }
+    else if(x_woj == 2 || x_woj.toLowerCase() == "niebieski") {
+        document.write('<h6 style="color:blue;">wczytałeś kolor niebieski</h6><br />');
+    } else {
+        alert("Nieprawidłowa wartość, wpisz 1, 2, czerwony lub niebieski.");
+    }
+}
+</script>
+</body>
+</html>
+</textarea>
+
+</body>
+</html>
+
